@@ -1,1 +1,6 @@
 # Final-Year-Project
+
+This is the source code of final year project(in bachelor level study) done by me. It is titled as "EasyForm". The main agenda of this applcation is to provide the virtual office environment and ease each individual to detect and record the data filled in the forms images. It can perfectly detect the handwritten text from forms.
+
+EasyForm is an android application that helps to provide a digital office-type environment and can read both normal and handwritten text from photographs of forms. After the text being detected, it can then be edited, stored in a database, or copied to the clipboard and used for other purposes. The main objective of this application is to use the capacity of the Android phone to manage staff digitally and retrieve data from the photograph of form. It entails digitized encoding and detection of printed or handwritten text. 
+Basically how it helps to recognize data from the photographs of form is, when any user selects an image of forms (data-filled) and press the button to detect text then the selected image is received by POST request of API (self-designed), processed it and extracted data is returned back to the android application in JSON format and is presented to the user.
