@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/f_Gap">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="65dp"
+        android:background="@drawable/thick_base"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="-8dp">
+
+        <TextView
+            android:id="@+id/fTitle"
+            style="@style/fTitle"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/fOpt"
+            style="@style/fOpt"
+            android:src="@drawable/opt" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_width="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/byText"
+                android:textStyle="bold"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fCreatedByPhoto"
+                style="@style/fCreatedByPhoto"/>
+
+            <TextView
+                android:id="@+id/fCreatedBy"
+                style="@style/fCreatedBy" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_width="0dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeText"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/fDate"
+                style="@style/fDate" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/fDesc"
+        style="@style/fDesc" />
+</LinearLayout>

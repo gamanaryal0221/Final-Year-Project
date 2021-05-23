@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/thick_base"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:elevation="10dp"
+    android:padding="13dp"
+    >
+
+    <TextView
+        android:id="@+id/fTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/thick_base"
+        android:backgroundTint="@color/black_transparent"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <ImageView
+        android:id="@+id/fOpt"
+        style="@style/fOpt"
+        android:src="@drawable/delete"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeText"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/fDate"
+            style="@style/fDate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/byText"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fCreatedByPhoto"
+            style="@style/fCreatedByPhoto"/>
+
+        <TextView
+            android:id="@+id/fCreatedBy"
+            style="@style/fCreatedBy" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fDesc"
+        style="@style/fDesc"/>
+
+</LinearLayout>

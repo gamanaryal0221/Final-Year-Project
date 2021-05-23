@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".staff.My_Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-50dp"
+                app:cardBackgroundColor="#254075"
+                app:cardCornerRadius="50dp">
+
+                <LinearLayout
+                    android:id="@+id/myProfileBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="25dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/myImage"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"/>
+
+                    <TextView
+                        android:id="@+id/myName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        style="@style/MP_DH">
+
+                        <ImageView
+                            style="@style/MP_DI"
+                            android:src="@drawable/id" />
+
+                        <TextView
+                            android:id="@+id/myOfficeID"
+                            style="@style/MP_DT"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/MP_DH">
+
+                        <ImageView
+                            style="@style/MP_DI"
+                            android:src="@drawable/post"
+                            app:tint="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/myPost"
+                            style="@style/MP_DT"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/MP_DH">
+
+                        <ImageView
+                            style="@style/MP_DI"
+                            android:src="@drawable/gender"
+                            app:tint="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/myGender"
+                            style="@style/MP_DT" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/MP_DH">
+
+                        <ImageView
+                            style="@style/MP_DI"
+                            android:src="@drawable/address"
+                            app:tint="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/myAdd"
+                            style="@style/MP_DT" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:text="@string/org"
+                        android:textSize="18.5sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp"
+                        android:background="@drawable/black_cover"
+                        >
+                        <TextView
+                            android:id="@+id/myOrgName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_below="@id/myOrgName"
+                            android:id="@+id/myOrgAdd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textStyle="italic"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/bigPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:src="@drawable/default_photo"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:padding="5dp"
+        android:onClick="closeStaffProfile"
+        app:tint="@color/white" />
+
+</RelativeLayout>

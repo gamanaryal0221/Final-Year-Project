@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F8"
+    tools:context=".form_field_record.All_Forms_Fields_Records">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:onClick="moveBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/formPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="40dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/countOfForm"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="-35dp"
+            android:layout_marginEnd="40dp"
+            android:layout_toEndOf="@id/formPageTitle"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textStyle="italic"/>
+
+        <RelativeLayout
+            android:id="@+id/filter"
+            android:layout_below="@id/formPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/up"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/black_transparent"
+                />
+
+            <LinearLayout
+                android:layout_below="@id/up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="2"
+                android:layout_above="@id/down"
+                >
+                <TextView
+                    android:id="@+id/fieldFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="@string/fields"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/recordFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="@string/records"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/down"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/black_transparent"
+                />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOfForms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomSheetOpener"
+            android:layout_below="@id/filter"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <TextView
+            android:id="@+id/errorTextOnListOfForms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/filter"
+            android:gravity="center"
+            android:padding="15dp"
+            android:layout_above="@id/bottomSheetOpener"
+            android:textColor="@color/mainRed"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:id="@+id/bottomSheetOpener"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black_transparent"
+            android:elevation="2dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/addSign"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/add" />
+
+                <TextView
+                    android:id="@+id/whatToAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/addSign"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet_for_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_drag"
+                android:background="@color/black"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/purpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/below_purpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/editTexts"
+                    style="@style/ANF_SSBH"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/form_field_Title"
+                        style="@style/R_L_RT"
+                        android:maxLines="2"/>
+
+                    <EditText
+                        android:id="@+id/form_field_Description"
+                        style="@style/R_L_RT"
+                        android:maxLines="8"
+                        android:hint="@string/description"
+                        android:minHeight="180dp"
+                        android:gravity="top|start"/>
+
+                    <Button
+                        android:id="@+id/add_Form_Field"
+                        style="@style/B"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/bottmsheet_btns"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

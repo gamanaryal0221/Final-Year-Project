@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:background="@drawable/staff_design"
+    android:elevation="5dp"
+    android:padding="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sPhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_photo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="7dp"
+            android:layout_toStartOf="@+id/staffOption"
+            android:layout_toEndOf="@id/sPhoto"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?android:attr/colorControlNormal"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/idSection"
+                style="@style/SS_SH">
+
+                <ImageView
+                    style="@style/SS_I"
+                    android:src="@drawable/id" />
+
+                <TextView
+                    android:id="@+id/sOfficeID"
+                    style="@style/SS_T"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/SS_SH">
+
+                <ImageView
+                    style="@style/SS_I"
+                    android:src="@drawable/post" />
+
+                <TextView
+                    android:id="@+id/sPost"
+                    style="@style/SS_T" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/genderSection"
+                style="@style/SS_SH"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="3dp"
+                android:visibility="gone">
+
+                <ImageView
+                    style="@style/SS_I"
+                    android:src="@drawable/gender" />
+
+                <TextView
+                    android:id="@+id/sGender"
+                    style="@style/SS_T" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addSection"
+                style="@style/SS_SH"
+                android:visibility="gone">
+
+                <ImageView
+                    style="@style/SS_I"
+                    android:src="@drawable/address" />
+
+                <TextView
+                    android:id="@+id/sAdd"
+                    style="@style/SS_T" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/staffOption"
+            android:layout_width="33dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="7dp"
+            android:src="@drawable/opt" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370866946006",
+    "firebase_url": "https://myorg-fd2ea.firebaseio.com",
+    "project_id": "myorg-fd2ea",
+    "storage_bucket": "myorg-fd2ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370866946006:android:cffc1b3aababbd16896e77",
+        "android_client_info": {
+          "package_name": "com.example.myorg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370866946006-g2s7gc6oa38r8hkv72sb8ga4qils51o9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7mQBJPrFe8CHmYfAuUQuXGNIwE4n1EHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370866946006-g2s7gc6oa38r8hkv72sb8ga4qils51o9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

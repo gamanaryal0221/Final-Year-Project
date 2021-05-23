@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".history.History">
+
+    <ImageView
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="7dp"
+        android:onClick="closeHistory"
+        android:padding="8dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/historyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="refresh"
+        android:paddingTop="10dp"
+        android:text="@string/all_history"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_below="@id/historyTitle"
+        android:id="@+id/filterer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textStyle="italic"
+        android:background="@drawable/single_list_design"
+        android:alpha="0.75"
+        />
+
+        <LinearLayout
+            android:id="@+id/filterOpt"
+            android:layout_below="@id/filterer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/ALL"
+                style="@style/H_F"
+                android:text="@string/all" />
+
+            <TextView
+                android:id="@+id/REQUESTS"
+                style="@style/H_F"
+                android:text="@string/requests" />
+
+            <TextView
+                android:id="@+id/APPROVED"
+                style="@style/H_F"
+                android:text="@string/approved" />
+
+            <TextView
+                android:id="@+id/DELETED"
+                style="@style/H_F"
+                android:text="@string/deleted" />
+
+            <TextView
+                android:id="@+id/FIRED"
+                style="@style/H_F"
+                android:text="@string/fired" />
+
+        </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filterOpt"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/noHistories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="65dp"
+        android:gravity="center"
+        android:text="@string/no_history"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="17.5sp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/f_Gap">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fieldNameCover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        app:cardBackgroundColor="#E4E4E4"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/fTitle"
+                style="@style/fTitle" />
+
+            <ImageView
+                android:id="@+id/fOpt"
+                style="@style/fOpt"
+                android:src="@drawable/delete"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/fDate"
+            style="@style/fDate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/byText"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fCreatedByPhoto"
+            style="@style/fCreatedByPhoto"/>
+
+        <TextView
+            android:id="@+id/fCreatedBy"
+            style="@style/fCreatedBy" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/fDesc"
+        style="@style/fDesc" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/blackOpt"
+        style="@style/ANF_SBH">
+
+        <ImageView
+            android:id="@+id/blackOptIcon"
+            style="@style/BS_OI" />
+
+        <TextView
+            android:id="@+id/blackOptText"
+            style="@style/ANF_SBI"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/greenOpt"
+        style="@style/ANF_SBH">
+
+        <ImageView
+            android:id="@+id/greenOptIcon"
+            style="@style/BS_OI" />
+
+        <TextView
+            android:id="@+id/greenOptText"
+            style="@style/ANF_SBI"
+            android:textColor="@color/mainGreen" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/redOpt"
+        style="@style/ANF_SBH">
+
+        <ImageView
+            android:id="@+id/redOptIcon"
+            style="@style/BS_OI" />
+
+        <TextView
+            android:id="@+id/redOptText"
+            style="@style/ANF_SBI"
+            android:textColor="@color/mainRed" />
+
+    </LinearLayout>
+</LinearLayout>

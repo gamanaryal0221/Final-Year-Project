@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registration_login.Registration_Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:gravity="center"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/registrationSectionChooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleText"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_transparent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/staffSection"
+                android:text="@string/staff"
+                style="@style/R_SC"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:id="@+id/organizationSection"
+                android:text="@string/organization"
+                style="@style/R_SC"
+                tools:ignore="Suspicious0dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layoutSwiper"
+            android:layout_below="@id/registrationSectionChooser"
+            android:padding="7dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/registrationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/default_photo"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:inputType="textPersonName"
+                        style="@style/R_L_RT"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="23dp"
+                            android:paddingEnd="23dp">
+
+                            <TextView
+                                android:id="@+id/genderText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:text="@string/gender" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/genderText"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <RadioButton
+                                    android:id="@+id/isMale"
+                                    style="@style/RB"
+                                    android:text="@string/male" />
+
+                                <RadioButton
+                                    android:id="@+id/isFemale"
+                                    style="@style/RB"
+                                    android:text="@string/female" />
+
+                                <RadioButton
+                                    android:id="@+id/isOthers"
+                                    style="@style/RB"
+                                    android:text="@string/others" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/address"
+                        android:inputType="textPostalAddress"
+                        style="@style/R_L_RT" />
+
+                    <EditText
+                        android:id="@+id/postOrPAN"
+                        style="@style/R_L_RT"
+                        android:inputType="text" />
+
+                    <Button
+                        android:id="@+id/organizationChooser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="#0000"
+                        android:drawableEnd="@drawable/drop_down"
+                        android:minHeight="70dp"
+                        android:padding="7dp"
+                        android:text="@string/select_organization"
+                        android:textColor="?android:attr/colorControlNormal"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/secretIDHolder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/email_or_id"
+                    style="@style/R_L_RT"
+                    android:inputType="textEmailAddress"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:id="@+id/pass"
+                    style="@style/R_L_RT"
+                    android:inputType="textPassword"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:id="@+id/confirmPass"
+                    style="@style/R_L_RT"
+                    android:inputType="textPassword"/>
+
+                <Button
+                    android:id="@+id/loginOrRegister"
+                    style="@style/B"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/layoutSwiper"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black_transparent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/organizationListNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="ltr"
+        app:headerLayout="@layout/all_organizations"
+        tools:ignore="RtlHardcoded">
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
